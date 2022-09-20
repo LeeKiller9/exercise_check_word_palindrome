@@ -1,0 +1,1 @@
+# exercise_check_word_palindrome
