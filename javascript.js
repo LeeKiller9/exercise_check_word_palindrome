@@ -6,15 +6,15 @@
 //     }
 //     return true;
 // }
-let str, arr, result = "";
+
 
 function checkWord() {
-    str = prompt("Enter string want to check");
-    arr = str.split("");
-    // console.log(arr);
+    let str = prompt("Enter string want to check");
+    let arr = str.split("");
+    let result = "";
     // console.log(isPalindrome(arr));
-    // let check = isPalindrome(arr);
-    if (isPalindrome(arr) != undefined && isPalindrome(arr)) {
+    let check = isPalindrome(arr);
+    if (check) {
         result = "is Palindrome word";
     } else {
         result = "is not Palindrome word";
@@ -27,7 +27,11 @@ function isPalindrome(arrPara) {
         if (arrPara[0] === arrPara[arrPara.length - 1]) {
             arrPara.shift();
             arrPara.pop();
-            isPalindrome(arrPara);
+            if (isPalindrome(arrPara)) {
+                return true
+            } else {
+                return false;
+            }
         } else {
             return false;
         }
